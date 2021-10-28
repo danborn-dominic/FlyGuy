@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGw-hR-C1r">
-                                <rect key="frame" x="65" y="54" width="284" height="43"/>
+                                <rect key="frame" x="65" y="69" width="284" height="43"/>
                                 <attributedString key="attributedText">
                                     <fragment content="F L Y G U Y">
                                         <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="43" name="Courier"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -29,14 +29,36 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a0K-M9-J3c" userLabel="speedBox">
+                                <rect key="frame" x="40" y="352" width="136" height="146"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mnA-W2-AHd" userLabel="altitudeBox">
+                                <rect key="frame" x="229" y="360" width="152" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTP-qV-Sh5" userLabel="Line Chart" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="74" y="181" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" label="Line Chart"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rGw-hR-C1r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="3pq-bR-5Um"/>
+                            <constraint firstItem="rGw-hR-C1r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="3h3-VA-yb7"/>
                             <constraint firstItem="rGw-hR-C1r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ASq-PJ-YZI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="altitudeBox" destination="mnA-W2-AHd" id="Vwm-bX-7nW"/>
+                        <outlet property="lineChart" destination="JTP-qV-Sh5" id="OHu-1d-7ej"/>
+                        <outlet property="speedBox" destination="mnA-W2-AHd" id="c05-nD-olY"/>
+                        <outlet property="textBox" destination="rGw-hR-C1r" id="zu0-hD-uvF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
