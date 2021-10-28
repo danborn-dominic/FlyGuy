@@ -13,6 +13,7 @@
 		07574C59272A1D8700684B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07574C57272A1D8700684B2B /* Main.storyboard */; };
 		07574C5B272A1D8900684B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07574C5A272A1D8800684B2B /* Assets.xcassets */; };
 		07574C5E272A1D8900684B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07574C5C272A1D8900684B2B /* LaunchScreen.storyboard */; };
+		FCC978F6317FEF9F2A7E6E65 /* Pods_FlyGuy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C8474EF4FE3839CC03767D /* Pods_FlyGuy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		07574C5A272A1D8800684B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07574C5D272A1D8900684B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07574C5F272A1D8900684B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D334F383563E14D5AFDFEC /* Pods-FlyGuy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyGuy.debug.xcconfig"; path = "Target Support Files/Pods-FlyGuy/Pods-FlyGuy.debug.xcconfig"; sourceTree = "<group>"; };
+		E9A2E14FCB6E36722DDA6C9A /* Pods-FlyGuy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyGuy.release.xcconfig"; path = "Target Support Files/Pods-FlyGuy/Pods-FlyGuy.release.xcconfig"; sourceTree = "<group>"; };
+		F1C8474EF4FE3839CC03767D /* Pods_FlyGuy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyGuy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC978F6317FEF9F2A7E6E65 /* Pods_FlyGuy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				07574C50272A1D8700684B2B /* FlyGuy */,
 				07574C4F272A1D8700684B2B /* Products */,
+				6BC4D63660CE7652214D9B41 /* Pods */,
+				949DE10E6A6D3C468C19A3AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = FlyGuy;
 			sourceTree = "<group>";
 		};
+		6BC4D63660CE7652214D9B41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6D334F383563E14D5AFDFEC /* Pods-FlyGuy.debug.xcconfig */,
+				E9A2E14FCB6E36722DDA6C9A /* Pods-FlyGuy.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		949DE10E6A6D3C468C19A3AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1C8474EF4FE3839CC03767D /* Pods_FlyGuy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07574C62272A1D8900684B2B /* Build configuration list for PBXNativeTarget "FlyGuy" */;
 			buildPhases = (
+				4927097F4CFD3EA27D47D73E /* [CP] Check Pods Manifest.lock */,
 				07574C4A272A1D8700684B2B /* Sources */,
 				07574C4B272A1D8700684B2B /* Frameworks */,
 				07574C4C272A1D8700684B2B /* Resources */,
+				36AF8AF4FD8FC6404CC5212D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36AF8AF4FD8FC6404CC5212D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlyGuy/Pods-FlyGuy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlyGuy/Pods-FlyGuy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlyGuy/Pods-FlyGuy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4927097F4CFD3EA27D47D73E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlyGuy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07574C4A272A1D8700684B2B /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		07574C63272A1D8900684B2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6D334F383563E14D5AFDFEC /* Pods-FlyGuy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		07574C64272A1D8900684B2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9A2E14FCB6E36722DDA6C9A /* Pods-FlyGuy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
